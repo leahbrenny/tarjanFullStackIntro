@@ -52,3 +52,24 @@ app.post( '/songs', ( req, res )=>{
         res.sendStatus( 500 );
     }) // end query
 }) // end /songs POST
+
+app.delete( '/songs/:id', ( req, res ) => {
+    console.log('req.params', req.params);
+
+    const queryString = `DELETE FROM "songs" WHERE "id" = $1;`
+
+    // Grab the :id param from the URL
+    let songId = req.params.id;     // 5
+    console.log("Gonna delete song with id=", songId);
+
+    // Execute DB query
+    pool.query(queryString, [songId])
+        .then((response) => {
+            console.log("Deleted!");
+            res.sendStatus(200);
+        })
+        .catch((err) => {
+            console.log("Error deleted record", err);
+            res.sendStatus(500);
+        })
+});
