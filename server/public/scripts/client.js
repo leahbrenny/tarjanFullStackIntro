@@ -17,10 +17,16 @@ function deleteSong(){
         url: `/songs/${songId}`     // /songs/10
     }).then( function( response ){
         console.log("Deleted!", response);
+
+        // Refresh page (aka do another GET request)
+        getSongs();
     }).catch( function(err){
         console.log("Error in delete", err);
         alert("ruh-roh");
     });
+
+
+
 }
 
 function addSong(){
