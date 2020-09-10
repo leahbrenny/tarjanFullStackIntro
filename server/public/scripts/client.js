@@ -20,6 +20,7 @@ function rankUp(){
             }
         }).then(function( response ){
             console.log('rankUp PUT', response);
+            getSongs();
         }).catch( function( err ){
             alert( 'error!' );
             console.log( err );
@@ -37,6 +38,7 @@ function rankDown(){
         }
     }).then(function( response ){
         console.log('rankDown PUT', response);
+        getSongs();
     }).catch( function( err ){
         alert( 'error!' );
         console.log( err );
@@ -100,8 +102,8 @@ function getSongs(){
             ${ response[i].artist }
             ${ response[i].published.split( 'T' )[0] }
             <button class="deleteSongBtn" data-id="${response[i].id}">Delete Me</button>
-            <button class="rankUpBtn" data-id="${response[i].id}">Rank Up</button>
-            <button class="rankDownBtn" data-id="${response[i].id}">Rank Down</button>
+            <button class="rankUpBtn" data-id="${response[i].id}">Up</button>
+            <button class="rankDownBtn" data-id="${response[i].id}">Down</button>
             </li>`)
         } // end for
     }).catch( function( err ){
