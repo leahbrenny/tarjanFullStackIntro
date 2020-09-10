@@ -92,3 +92,8 @@ app.delete( '/songs/:id', ( req, res ) => {
             res.sendStatus(500);
         })
 });
+
+app.put('/songs/:id',(req, res)=>{
+    console.log('params', req.params.id, req.body);
+    res.sendStatus(200)
+});
