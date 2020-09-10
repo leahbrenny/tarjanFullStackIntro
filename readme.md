@@ -27,31 +27,33 @@ end 2nd lecture segment
 
 ## CRUD
 
-HTTP      English                       SQL
-------    --------                      ------
-GET       Get a list of songs           SELECT
-POST      Create a new song             INSERT
-DELETE    Remove a song                 DELETE
-PUT       Modify an existing song       UPDATE
+
+- Create
+- Read
+- Update
+- Delete
 
 
-CRUD
-------------------------
-Create
-Read
-Update
-Delete
+HTTP    |  English                |       SQL
+------  |  --------               |       ------
+GET     |  Get a list of songs    |       SELECT
+POST    |  Create a new song      |       INSERT
+DELETE  |  Remove a song          |       DELETE
+PUT     |  Modify an existing song  |       UPDATE
 
 
-Standard API Endpoints
-------------------------
+
+
+### Standard API Endpoints
+
 GET /monkeys          List monkeys
 GET /monkeys/:id      Get a monkey by id
 POST /monkeys         Create a monkey
 PUT /monkeys/:id      Update a monkey by id
 DELETE /monkeys/:id   Delete a monkey by id
 
-## Which quotes should I use?!
+
+### Which quotes should I use?!
 
 SQL is picky about quotes! Unlike Javascript where you can use double-quotes ("), single-quotes('), or back-ticks (``) interchangeably, in SQL these mean different things:
 
