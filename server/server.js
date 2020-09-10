@@ -96,13 +96,14 @@ app.delete( '/songs/:id', ( req, res ) => {
 app.put('/songs/:id',(req, res)=>{
     console.log('params', req.params.id, req.body);
     let queryString = '';
+    let songId = req.params.id;
     if(req.body.direction === 'up'){
     queryString = `UPDATE "songs" SET "rank" = "rank"+1 WHERE "id" = $1;`
     } else if (req.body.direction === 'down'){
         queryString = `UPDATE "songs" SET "rank" = "rank"-1 WHERE "id" = $1;`
     } else {
         console.log('this data is broken');
-        
+        res.sendStatus(500)
     }
 
     pool.query(queryString [req.params.id])
