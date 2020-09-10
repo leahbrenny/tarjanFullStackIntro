@@ -46,11 +46,13 @@ PUT     |  Modify an existing song  |       UPDATE
 
 ### Standard API Endpoints
 
-GET /monkeys          List monkeys
-GET /monkeys/:id      Get a monkey by id
-POST /monkeys         Create a monkey
-PUT /monkeys/:id      Update a monkey by id
-DELETE /monkeys/:id   Delete a monkey by id
+| | |
+|---------------------|-----------------------|
+| GET /monkeys        | List monkeys          |
+| GET /monkeys/:id    | Get a monkey by id    |
+| POST /monkeys       | Create a monkey       |
+| PUT /monkeys/:id    | Update a monkey by id |
+| DELETE /monkeys/:id | Delete a monkey by id |
 
 
 ### Which quotes should I use?!
